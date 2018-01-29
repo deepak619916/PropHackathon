@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="task3style.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <ul class="navbar">
+      <li style="border-right: 0px"><a class="active" href="#">Filters</a></li>
+      <li><i class="fa fa-filter" style="font-size:30px;color:lightblue;text-shadow:1px 1px 3px #000000;"></i></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn"> Category</a>
+        <div class="dropdown-content">
+          <a id="buyId" onclick="buyClicked()">  Buy  </a>
+          <a id="rentId" onclick="rentClicked()"> Rent </a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn"> Bedrooms</a>
+        <div class="dropdown-content">
+           <label> <input type="checkbox" id="bhk1" onclick="bedroomClicked()"> <font color="white"> 1 BHK  </font><br>  </label>
+          <label> <input type="checkbox" id="bhk2" onclick="bedroomClicked()"> <font color="white">2 BHK</font><br>   </label>
+          <label> <input type="checkbox" id="bhk3" onclick="bedroomClicked()"> <font color="white">3 BHK</font> <br>   </label>
+          <label> <input type="checkbox" id="bhk4". onclick="bedroomClicked()"> <font color="white">3+ BHK </font><br>    </label>
+        
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn" id="sort"> Sort</a>
+        <div class="dropdown-content">
+          <a id="sortasc" onclick="sortLowToHigh()">  Price low to high  </a>
+          <a id="sortdesc" onclick="sortHighToLow()"> Price high to low </a>
+          <a id="sortpop" onclick="sortByPopularity()"> Sort By Popularity </a>
+        </div>
+      </li>
+
+      <div class="inputsearch">
+      <li class="searchBox">
+              
+          <input type="text" id="search" placeholder="Search City.."    onkeydown = "if (event.keyCode == 13) searchCity()">
+          
+        
+      </li>
+      </div>
+
+    </ul>
+  </div>
+<br>
+<br>
+<div class="ShowResult">
+</div>
+
+<div class="pagination" id="fixit">
+ <a> &laquo;</a>
+ <a onclick="pageNoClicked(1)" style="cursor: pointer;" id="p1">1</a>
+ <a onclick="pageNoClicked(2)" style="cursor: pointer;" id="p2">2</a>
+ <a onclick="pageNoClicked(3)" style="cursor: pointer;" id="p3">3</a>
+ <a onclick="pageNoClicked(4)" style="cursor: pointer;" id="p4">4</a>
+ <a onclick="pageNoClicked(5)" style="cursor: pointer;" id="p5">5</a>
+ <a onclick="pageNoClicked(6)" style="cursor: pointer;" id="p6">6</a>
+ <a> &raquo;</a>
+</div>
+<!-- 
+  <div class="card">
+<div class = property-image><img src="http://images.citywebindia.com/Advertisement/saharanpurweb_Property-Dealers-in-Saharanpur_1d98b60d-f_30-04-2016141957.jpg" alt="Avatar" style="width:100%"> </div>
+<div class="property-content">
+  <h3 class = property-title> <b>4 BHK Independent House</b>  </h4>
+  <p>Sector 48 Gurgaon</p>
+</div>
+</div> -->
+
+<script type="text/javascript" src=script3.js></script>
+</body>
+</html>
